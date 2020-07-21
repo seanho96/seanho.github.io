@@ -80,10 +80,10 @@
 var modal1 = document.getElementById('budgetapp-gif');
 var modal2 = document.getElementById('boardey-gif');
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function (event) {
-	if (event.target == modal1 || modal2) {
-		window.location.href = "/#section-projects";
-	}
+// // When the user clicks anywhere outside of the modal, close it
+// window.onclick = function (event) {
+// 	if (event.target == modal1 || modal2) {
+// 		window.location.href = "/#section-projects";
+// 	}
 
-}
+// }
