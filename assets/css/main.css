@@ -1,11 +1,6 @@
 @import url(fontawesome-all.min.css);
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,800,800italic");
 
-/*
-	Spectral by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
 
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
@@ -72,9 +67,13 @@ input, select, textarea {
 	appearance: none;
 }
 
+.project__used {
+	margin-bottom: 15px;
+}
+
 .project__used__item {
     display: inline-block;
-    margin: 3px 3px 3px 0;
+    margin: 3px 3px 3px;
     font-family: Inconsolata,monospace;
     font-size: .75rem;
     font-weight: 700;
@@ -84,6 +83,141 @@ input, select, textarea {
     border: 1px solid #fff;
     background: 0 0;
 }
+
+
+
+
+
+/* Popup */
+
+.popup {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+@supports ((-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px))) {
+  .popup {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+}
+
+.popup__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 75%;
+  background-color: #fff;
+  -webkit-box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  display: table;
+  overflow: hidden;
+  opacity: 0;
+  -webkit-transform: translate(-50%, -50%) scale(0.25);
+          transform: translate(-50%, -50%) scale(0.25);
+  -webkit-transition: all .5s .2s;
+  transition: all .5s .2s;
+}
+
+.popup__left {
+  width: 33.333333%;
+  display: table-cell;
+}
+
+.popup__right {
+  width: 66.6666667%;
+  display: table-cell;
+  vertical-align: middle;
+  padding: 3rem 5rem;
+}
+
+.popup__img {
+  display: block;
+  width: 100%;
+}
+
+.popup__text {
+  font-size: 1.4rem;
+  margin-bottom: 4rem;
+  -moz-column-count: 2;
+  -moz-column-gap: 4rem;
+  -moz-column-rule: 1px solid #eee;
+  -webkit-column-count: 2;
+          column-count: 2;
+  -webkit-column-gap: 4rem;
+          column-gap: 4rem;
+  -webkit-column-rule: 1px solid #eee;
+          column-rule: 1px solid #eee;
+  -ms-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+.popup:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup:target .popup__content {
+  opacity: 1;
+  -webkit-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
+}
+
+.popup__close:link, .popup__close:visited {
+  color: #777;
+  position: absolute;
+  top: 2.5rem;
+  right: 2.5rem;
+  font-size: 3rem;
+  text-decoration: none;
+  display: inline-block;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  line-height: 1;
+}
+
+.popup__close:hover {
+  color: #55c57a;
+}
+
+
+.popup-close-icon {
+  text-decoration: none;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 0.2em;
+  background: var(--lm-close-bg);
+  font-size: 1.5em;
+  line-height: 1;
+  opacity: 1;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.popup-close-icon:hover {
+  opacity: 0.9;
+}
+
+.popup-close-icon {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+}
+
+
 
 /* Basic */
 
@@ -2828,6 +2962,18 @@ input, select, textarea {
 		.wrapper.alt {
 			padding: 0;
 		}
+
+		.wrapper.style6 {
+			background-color: #dee8f0;
+			color: #333;
+			padding: 2em 0 0.1em 0;
+		}
+
+			.wrapper.style6 h2 {
+				color: #2B343D;
+				border-color: #2B343D;
+			}
+		
 
 		.wrapper.style1 {
 			background-color: #21b2a6;

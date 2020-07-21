@@ -29,10 +29,10 @@
 						<div id="menu">
 							<ul>
 								<li><a href="index.html">Home</a></li>
-								<li><a href="generic.html">Generic</a></li>
-								<li><a href="elements.html">Elements</a></li>
-								<li><a href="#">Sign Up</a></li>
-								<li><a href="#">Log In</a></li>
+								<li><a href="#about-me">About Me</a></li>
+								<li><a href="#projects">Projects</a></li>
+								<li><a href="#skills">Skills</a></li>
+								<li><a href="#contact">Contact</a></li>
 							</ul>
 						</div>
 					</li>
@@ -54,8 +54,8 @@
 			<a href="#one" class="more scrolly">Learn More</a>
 		</section>
 
-		<!-- One -->
-		<section id="one" class="wrapper style1 special">
+		<!-- About Me -->
+		<section id="about-me" class="wrapper style1 special">
 			<div class="inner">
 				<header class="major">
 					<h2>A little about me</h2>
@@ -70,29 +70,40 @@
 			</div>
 		</section>
 
-		<!-- Two -->
-		<section id="two" class="wrapper alt style2">
+
+
+
+		<!-- Project -->
+		<section id="projects" class="wrapper style6 special">
+			<div class="inner">
+				<header class="major">
+					<h2>Projects</h2>
+				</header>
+			</div>
+		</section>
+
+
+		<section id="section-projects" class="wrapper alt style2">
 			<section class="spotlight">
 
 				<a href="#budgetapp-gif" class="image">
 					<img src="images/Project1.jpg" alt="Budget App" />
 				</a>
 
-				<div class="light-modal" id="budgetapp-gif" role="dialog" aria-labelledby="light-modal-label"
-					aria-hidden="true">
-					<div class="light-modal-content animated zoomInUp">
-						<img src="gifs/BudgetApp.gif" alt="BudgetApp gif">
-						<a href="/" class="light-modal-close-icon" aria-label="close"
-							onclick="document.getElementById('budgetapp-gif').style.display='none'">&times;</a>
-						<div class="light-modal-caption">BudgetApp</div>
+				<div class="popup" id="budgetapp-gif">
+					<div class="popup__content">
+						<div class="popup__gif">
+							<img src="gifs/BudgetApp.gif" alt="BudgetApp" class="popup__img">
+							<a href="#section-projects" class="light-modal-close-icon" id="popup-close-icon"
+								aria-label="close">&times;</a>
+						</div>
 					</div>
 				</div>
 
 				<div class="content">
 					<div>
 						<h2>Budget App</h2>
-						<p>Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam
-							aenean mi ligula.</p>
+						<p>A simple budgeting app that allows the user to add and remove their income and expenses.</p>
 					</div>
 
 					<div class="project__used">
@@ -100,9 +111,11 @@
 						<span class="project__used__item">CSS</span>
 						<span class="project__used__item">HTML</span>
 					</div>
+					<div class="source-button">
+						<button><a href="http://github.com/seanho96/budgetapp">Source</a></button>
+					</div>
 				</div>
 			</section>
-
 
 
 			<section class="spotlight">
@@ -111,21 +124,22 @@
 					<img src="images/Project2.jpg" alt="Boardey" />
 				</a>
 
-				<div class="light-modal" id="boardey-gif" role="dialog" aria-labelledby="light-modal-label" aria-hidden="true">
-					<div class="light-modal-content animated zoomInUp">
-						<img src="gifs/Mech.gif" alt="Boardey gif">
-						<a href="/" class="light-modal-close-icon" aria-label="close"
-							onclick="document.getElementById('boardey-gif').style.display='none'">&times;</a>
-						<div class="light-modal-caption">Boardey</div>
+
+				<div class="popup" id="boardey-gif">
+					<div class="popup__content">
+						<div class="popup__gif">
+							<img src="gifs/Mech.gif" alt="Boardey" class="popup__img">
+							<a href="#section-projects" class="light-modal-close-icon" id="popup-close-icon"
+								aria-label="close">&times;</a>
+						</div>
 					</div>
 				</div>
-
 
 				<div class="content">
 					<div>
 						<h2>Boardey Website</h2>
-						<p>Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam
-							aenean mi ligula.</p>
+						<p>A mechanical keyboard subscription service that allows enthusiasts to rent custom keyboards without
+							breaking the bank.</p>
 					</div>
 
 					<div class="project__used">
@@ -133,15 +147,34 @@
 						<span class="project__used__item">CSS</span>
 						<span class="project__used__item">HTML</span>
 					</div>
+					<div class="source-button">
+						<button><a href="http://github.com/seanho96/boardey">Source</a></button>
+					</div>
 				</div>
 			</section>
+
+
+
 			<section class="spotlight">
-				<div class="image"><img src="images/Project3.png" alt="WebApp Solution" /></div>
+
+				<a href="#webappsolution-gif" class="image">
+					<img src="images/Project3.png" alt="WebAppSolution" />
+				</a>
+
+				<div class="popup" id="webappsolution-gif">
+					<div class="popup__content">
+						<div class="popup__gif">
+							<img src="gifs/WebAppSolution.gif" alt="WebAppSolution" class="popup__img">
+							<a href="#section-projects" class="light-modal-close-icon" id="popup-close-icon"
+								aria-label="close">&times;</a>
+						</div>
+					</div>
+				</div>
+
 				<div class="content">
 					<div>
 						<h2>WebApp Solution Website</h2>
-						<p>Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam
-							aenean mi ligula.</p>
+						<p>WebAppSolution helps their clients engineer custom responsive web apps quick and efficiently.</p>
 					</div>
 
 					<div class="project__used">
@@ -151,6 +184,9 @@
 						<span class="project__used__item">CSS</span>
 						<span class="project__used__item">HTML</span>
 					</div>
+					<div class="source-button">
+						<button><a href="http://github.com/seanho96/webappsolution">Source</a></button>
+					</div>
 
 
 				</div>
@@ -158,7 +194,7 @@
 		</section>
 
 		<!-- Three -->
-		<section id="three" class="wrapper style3 special">
+		<section id="skills" class="wrapper style3 special">
 			<div class="inner">
 				<header class="major">
 					<h2>Skills</h2>
@@ -228,6 +264,10 @@
 				<li>Designed by: <a href="http://html5up.net">Sean Ho</a></li>
 			</ul>
 		</footer>
+
+
+
+
 
 	</div>
 
